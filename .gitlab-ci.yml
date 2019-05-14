@@ -3,6 +3,9 @@ stages:
 
 maven_test:
   stage: test
+  image: maven
+  tags:
+    - docker
   script:
     - mvn verify
   artifacts:
