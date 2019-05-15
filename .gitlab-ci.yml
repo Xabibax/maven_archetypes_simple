@@ -8,6 +8,7 @@ maven_test:
     - docker
   script:
     - mvn verify
+    - mvn package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/dashboard?id=maven_archetype_simple
   artifacts:
     reports:
       junit:
